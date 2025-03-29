@@ -14,7 +14,7 @@ import {
 } from "@sanity/icons";
 
 export type Props = {
-  itemsStatus: string;
+  itemsStatus: "idle" | "loading" | "succeeded" | "failed";
   itemsMessage: string;
   items: Record<string, string>[];
   itemsName?: { singular: string; plural: string };
@@ -24,6 +24,17 @@ export type Props = {
   emailAddress?: string;
 };
 
+/**
+ * TableSection component
+ * @param itemsStatus - Status of the items (idle, loading, succeeded, failed)
+ * @param itemsMessage - Message to display in case of error
+ * @param items - Array of items to display in the table
+ * @param itemsName - Object containing singular and plural names for the items
+ * @param newItemLink - Link to create a new item
+ * @param lengthOptions - Array of options for the number of items per page
+ * @param columnsTitles - Array of objects containing id and title for each column
+ * @param emailAddress - Email address for support contact
+ */
 export function TableSection({
   itemsStatus,
   itemsMessage,
