@@ -1,7 +1,7 @@
 {
   "name": "wh-table",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -31,6 +31,38 @@
     "globals": "^15.15.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.0"
-  }
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.3"
+  },
+  "description": "A typescript react accessible table component for WealthHealth",
+  "main": "./dist/wh-table.umd.js",
+  "module": "./dist/wh-table.es.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/wh-table.es.js",
+      "require": "./dist/wh-table.umd.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spratch/WHTable.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "a11y",
+    "tailwind",
+    "typescript"
+  ],
+  "author": "Joseph Clenet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Spratch/WHTable/issues"
+  },
+  "homepage": "https://github.com/Spratch/WHTable#readme"
 }
