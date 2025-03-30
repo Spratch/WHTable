@@ -33,8 +33,7 @@ npm install @spratch/whtable
 ## Usage
 
 ```jsx
-import { TableSection, WHTableStore } from "@spratch/whtable";
-import { Provider } from "react-redux";
+import { WHTable } from "@spratch/whtable";
 
 function YourComponent() {
   const employees = [
@@ -56,18 +55,16 @@ function YourComponent() {
   ];
 
   return (
-    <Provider store={WHTableStore}>
-      <TableSection
-        itemsStatus="succeeded"
-        itemsMessage=""
-        items={employees}
-        itemsName={{ singular: "employee", plural: "employees" }}
-        newItemLink="/create-employee"
-        lengthOptions={["10", "25", "50", "100"]}
-        columnsTitles={columns}
-        emailAddress="support@wealthhealth.com"
-      />
-    </Provider>
+    <WHTable
+      itemsStatus="succeeded"
+      itemsMessage=""
+      items={employees}
+      itemsName={{ singular: "employee", plural: "employees" }}
+      newItemLink="/create-employee"
+      lengthOptions={["10", "25", "50", "100"]}
+      columnsTitles={columns}
+      emailAddress="support@wealthhealth.com"
+    />
   );
 }
 ```
@@ -88,10 +85,6 @@ function YourComponent() {
 ## License
 
 MIT
-
-## Author
-
-Joseph Clenet
 
 ## Issues
 
