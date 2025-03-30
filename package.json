@@ -37,13 +37,12 @@
   },
   "prepublishOnly": "npm run build",
   "description": "A typescript react accessible table component for WealthHealth",
-  "main": "./dist/whtable.umd.js",
+  "main": "./dist/whtable.es.js",
   "module": "./dist/whtable.es.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/whtable.es.js",
-      "require": "./dist/whtable.umd.js"
+      "import": "./dist/whtable.es.js"
     },
     "./style.css": "./dist/whtable.css"
   },

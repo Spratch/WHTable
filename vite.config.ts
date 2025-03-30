@@ -10,6 +10,7 @@ export default defineConfig({
     lib: {
       entry: "./src/index.ts",
       name: "whtable",
+      formats: ["es"],
       fileName: (format) => `whtable.${format}.js`
     },
     rollupOptions: {
