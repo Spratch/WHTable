@@ -27,13 +27,13 @@ To use WHTable, you need:
 ## Installation
 
 ```bash
-npm install wh-table
+npm install @spratch/whtable
 ```
 
 ## Usage
 
 ```jsx
-import { TableSection, WHTableStore } from "wh-table";
+import { TableSection, WHTableStore } from "@spratch/whtable";
 import { Provider } from "react-redux";
 
 function YourComponent() {

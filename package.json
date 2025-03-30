@@ -1,6 +1,5 @@
 {
-  "name": "wh-table",
-  "private": true,
+  "name": "@spratch/whtable",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
@@ -18,7 +17,8 @@
     "react-dom": "^19.0.0",
     "react-redux": "^9.2.0",
     "tailwindcss": "^4.0.17",
-    "tailwindcss-react-aria-components": "^2.0.0"
+    "tailwindcss-react-aria-components": "^2.0.0",
+    "vite-plugin-css-injected-by-js": "^3.5.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -32,21 +32,25 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
-    "vite-plugin-dts": "^4.5.3"
+    "vite-plugin-dts": "^4.5.3",
+    "vite-plugin-libcss": "^1.1.1"
   },
+  "prepublishOnly": "npm run build",
   "description": "A typescript react accessible table component for WealthHealth",
-  "main": "./dist/wh-table.umd.js",
-  "module": "./dist/wh-table.es.js",
+  "main": "./dist/whtable.umd.js",
+  "module": "./dist/whtable.es.js",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/wh-table.es.js",
-      "require": "./dist/wh-table.umd.js"
-    }
+      "import": "./dist/whtable.es.js",
+      "require": "./dist/whtable.umd.js"
+    },
+    "./style.css": "./dist/whtable.css"
   },
   "types": "./dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "dist/whtable.css"
   ],
   "repository": {
     "type": "git",
