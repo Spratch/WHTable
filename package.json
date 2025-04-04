@@ -11,17 +11,12 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
     "@sanity/icons": "^3.7.0",
-    "@tailwindcss/vite": "^4.0.17",
-    "react": "^19.0.0",
     "react-aria-components": "^1.7.1",
-    "react-dom": "^19.0.0",
-    "react-redux": "^9.2.0",
-    "tailwindcss": "^4.0.17",
-    "tailwindcss-react-aria-components": "^2.0.0",
-    "vite-plugin-css-injected-by-js": "^3.5.2"
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@tailwindcss/vite": "^4.1.2",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react-swc": "^3.8.0",
@@ -29,11 +24,16 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "tailwindcss": "^4.1.2",
+    "tailwindcss-react-aria-components": "^2.0.0",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
-    "vite-plugin-dts": "^4.5.3",
-    "vite-plugin-libcss": "^1.1.1"
+    "vite-plugin-dts": "^4.5.3"
+  },
+  "peerDependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "prepublishOnly": "npm run build",
   "description": "A typescript react accessible table component for WealthHealth",
@@ -43,13 +43,11 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/whtable.es.js"
-    },
-    "./style.css": "./dist/whtable.css"
+    }
   },
   "types": "./dist/index.d.ts",
   "files": [
-    "dist",
-    "dist/whtable.css"
+    "dist"
   ],
   "repository": {
     "type": "git",
