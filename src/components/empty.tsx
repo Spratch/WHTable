@@ -18,16 +18,16 @@ export default function EmptyList({
   isLoading = false
 }: Props) {
   return (
-    <section className="flex-grow flex flex-col items-center justify-center gap-6 w-full max-w-7xl mx-auto py-5 md:py-12">
+    <section className="tw:flex-grow tw:flex tw:flex-col tw:items-center tw:justify-center tw:gap-6 tw:w-full tw:max-w-7xl tw:mx-auto tw:py-5 tw:md:py-12">
       <Icon
-        className={`size-24 text-neutral-300 dark:text-neutral-600 ${
-          isLoading ? "animate-spin" : ""
+        className={`tw:size-24 tw:text-neutral-300 tw:dark:text-neutral-600 ${
+          isLoading ? "tw:animate-spin" : ""
         }`}
       />
-      <div className="flex flex-col gap-2 items-center text-center">
-        <h2 className="text-3xl">{title}</h2>
+      <div className="tw:flex tw:flex-col tw:gap-2 tw:items-center tw:text-center">
+        <h2 className="tw:text-3xl">{title}</h2>
         {description && (
-          <p className="text-lg text-neutral-500 dark:text-neutral-400">
+          <p className="tw:text-lg tw:text-neutral-500 tw:dark:text-neutral-400">
             {description}
           </p>
         )}

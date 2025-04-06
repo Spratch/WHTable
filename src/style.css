@@ -1,15 +1,15 @@
-@import "tailwindcss";
+@import "tailwindcss" prefix(tw);
 
 @plugin "tailwindcss-react-aria-components";
 
 @layer utilities {
-  .focus {
-    @apply focus:outline-2 focus:outline-offset-2 focus:outline-lime-600 dark:focus:outline-lime-400;
+  .tw\:focus {
+    @apply tw:focus:outline-2 tw:focus:outline-offset-2 tw:focus:outline-lime-600 tw:dark:focus:outline-lime-400;
   }
-  .focus-visible {
-    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-lime-600 dark:focus-visible:outline-lime-400;
+  .tw\:focus-visible {
+    @apply tw:focus-visible:outline-2 tw:focus-visible:outline-offset-2 tw:focus-visible:outline-lime-600 tw:dark:focus-visible:outline-lime-400;
   }
-  .has-focus {
-    @apply has-focus:outline-2 has-focus:outline-offset-2 has-focus:outline-lime-600 dark:has-focus:outline-lime-400;
+  .tw\:has-focus {
+    @apply tw:has-focus:outline-2 tw:has-focus:outline-offset-2 tw:has-focus:outline-lime-600 tw:dark:has-focus:outline-lime-400;
   }
 }

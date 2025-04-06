@@ -11,15 +11,15 @@ export default function Cta({ to, text, primary = false, Icon }: CtaProps) {
   return (
     <Link
       href={to}
-      className={`px-4 py-2 border border-lime-600 dark:border-lime-400 transition-colors rounded-full flex items-center gap-2 focus
+      className={`tw:px-4 tw:py-2 tw:border tw:border-lime-600 tw:dark:border-lime-400 tw:transition-colors tw:rounded-full tw:flex tw:items-center tw:gap-2 tw:focus
         ${
           primary
-            ? "bg-lime-600 hover:bg-lime-700 dark:bg-lime-400 dark:hover:bg-lime-300 text-lime-50 dark:text-lime-950"
-            : "hover:bg-lime-100 dark:bg-neutral-900 dark:hover:bg-lime-900 text-lime-600 dark:text-lime-400"
+            ? "tw:bg-lime-600 tw:hover:bg-lime-700 tw:dark:bg-lime-400 tw:dark:hover:bg-lime-300 tw:text-lime-50 tw:dark:text-lime-950"
+            : "tw:hover:bg-lime-100 tw:dark:bg-neutral-900 tw:dark:hover:bg-lime-900 tw:text-lime-600 tw:dark:text-lime-400"
         }
         `}
     >
-      {Icon && <Icon className="size-6" />}
+      {Icon && <Icon className="tw:size-6" />}
       {text}
     </Link>
   );
