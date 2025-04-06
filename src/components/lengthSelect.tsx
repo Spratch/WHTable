@@ -25,28 +25,28 @@ export default function LengthSelect<T extends object>({
 }: LengthSelectProps<T>) {
   return (
     <Select
-      className="flex flex-col gap-1 text-nowrap"
+      className="tw:flex tw:flex-col tw:gap-1 tw:text-nowrap"
       aria-label="Select page length"
       {...props}
     >
-      <Button className="bg-white dark:bg-neutral-800 border border-neutral-200 focus:border-neutral-300 dark:border-neutral-700 dark:focus:border-neutral-500 p-2 rounded-md focus appearance-none flex items-center relative group pr-8">
+      <Button className="tw:bg-white tw:dark:bg-neutral-800 tw:border tw:border-neutral-200 tw:focus:border-neutral-300 tw:dark:border-neutral-700 tw:dark:focus:border-neutral-500 tw:p-2 tw:rounded-md tw:focus tw:appearance-none tw:flex tw:items-center tw:relative tw:group tw:pr-8">
         <SelectValue className=""></SelectValue>
-        <span className="opacity-50 px-2">/ {totalItems}</span>
-        <ChevronDownIcon className="absolute right-0 top-0 m-1.25 group-pressed:-rotate-180 transition-transform size-8" />
+        <span className="tw:opacity-50 tw:px-2">/ {totalItems}</span>
+        <ChevronDownIcon className="tw:absolute tw:right-0 tw:top-0 tw:m-1.25 tw:group-pressed:-rotate-180 tw:transition-transform tw:size-8" />
       </Button>
       <FieldError>{errorMessage}</FieldError>
       <Popover
-        className="overflow-auto rounded-lg border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 "
+        className="tw:overflow-auto tw:rounded-lg tw:border tw:border-neutral-200 tw:dark:border-neutral-700 tw:bg-white tw:dark:bg-neutral-800 "
         maxHeight={320}
         style={{ width: "var(--trigger-width)" }}
       >
-        <ListBox className="py-2 text-neutral-900 dark:text-neutral-100 outline-0">
+        <ListBox className="tw:py-2 tw:text-neutral-900 tw:dark:text-neutral-100 tw:outline-0">
           {options.map((option, index) => {
             return (
               <ListBoxItem
                 key={index}
                 id={option}
-                className="pl-3 pr-5 py-1 focus:bg-neutral-100 dark:focus:bg-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-700 selected:bg-lime-200 dark:selected:bg-lime-700 outline-none"
+                className="tw:pl-3 tw:pr-5 tw:py-1 tw:focus:bg-neutral-100 tw:dark:focus:bg-neutral-700 tw:hover:bg-neutral-100 tw:dark:hover:bg-neutral-700 tw:selected:bg-lime-200 tw:dark:selected:bg-lime-700 tw:outline-none"
               >
                 {option}
               </ListBoxItem>

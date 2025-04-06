@@ -60,7 +60,7 @@ export function TableSection({
                 There was an error while trying to fetch the {itemsName.plural}.
               </span>
               <br />
-              <span className="inline-block mt-1.5 text-red-600 dark:text-red-400 text-sm font-mono bg-red-50 dark:bg-red-950 py-2 px-3 rounded-md border border-red-200 dark:border-red-700">
+              <span className="tw:inline-block tw:mt-1.5 tw:text-red-600 tw:dark:text-red-400 tw:text-sm tw:font-mono tw:bg-red-50 tw:dark:bg-red-950 tw:py-2 tw:px-3 tw:rounded-md tw:border tw:border-red-200 tw:dark:border-red-700">
                 {itemsMessage}
               </span>
             </>
@@ -97,8 +97,8 @@ export function TableSection({
           }
         />
       ) : (
-        <section className="flex-1 max-h-full min-h-0 flex flex-col items-start w-full max-w-7xl mx-auto py-5 gap-2 md:gap-5">
-          <div className="flex flex-row-reverse md:flex-row w-full flex-wrap justify-between md:items-end gap-2 md:gap-5">
+        <section className="tw:flex-1 tw:max-h-full tw:min-h-0 tw:flex tw:flex-col tw:items-start tw:w-full tw:max-w-7xl tw:mx-auto tw:py-5 tw:gap-2 tw:md:gap-5">
+          <div className="tw:flex tw:flex-row-reverse tw:md:flex-row tw:w-full tw:flex-wrap tw:justify-between tw:md:items-end tw:gap-2 tw:md:gap-5">
             <LengthSelect
               options={lengthOptions}
               totalItems={totalItems}

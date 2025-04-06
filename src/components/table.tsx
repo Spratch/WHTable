@@ -34,12 +34,12 @@ export default function WHTable({ columnsTitles, label, items }: WHTableProps) {
 
   return (
     <>
-      <ResizableTableContainer className="w-full overflow-auto scroll-pt-8 relative rounded-lg bg-white text-neutral-600 dark:bg-black dark:text-neutral-50 max-h-full border border-neutral-200 dark:border-neutral-700">
+      <ResizableTableContainer className="tw:w-full tw:overflow-auto tw:scroll-pt-8 tw:relative tw:rounded-lg tw:bg-white tw:text-neutral-600 tw:dark:bg-black tw:dark:text-neutral-50 tw:max-h-full tw:border tw:border-neutral-200 tw:dark:border-neutral-700">
         <Table
           aria-label={label}
           sortDescriptor={sortDescriptor}
           onSortChange={handleSortChange}
-          className="border-separate border-spacing-0"
+          className="tw:border-separate tw:border-spacing-0"
         >
           <TableHeader>
             {columnsTitles.map((column, index) => (
@@ -82,27 +82,27 @@ function WHColumn(props: ColumnProps & { children: string }) {
   return (
     <Column
       {...props}
-      className="sticky top-0 p-0 border-0 border-b border-solid border-neutral-300 dark:border-neutral-700 bg-neutral-200 dark:bg-neutral-800 font-light pt-0.5 tracking-wider uppercase text-xs text-left cursor-default first-rounded-tl-lg last-rounded-tr-lg whitespace-nowrap outline-hidden"
+      className="tw:sticky tw:top-0 tw:p-0 tw:border-0 tw:border-b tw:border-solid tw:border-neutral-300 tw:dark:border-neutral-700 tw:bg-neutral-200 tw:dark:bg-neutral-800 tw:font-light tw:pt-0.5 tw:tracking-wider tw:uppercase tw:text-xs tw:text-left tw:cursor-default tw:first-rounded-tl-lg tw:last-rounded-tr-lg tw:whitespace-nowrap tw:outline-hidden"
     >
       {({ allowsSorting, sortDirection }) => (
-        <div className="flex items-center pl-4 py-1">
+        <div className="tw:flex tw:items-center tw:pl-4 tw:py-1">
           <Group
             role="presentation"
             tabIndex={-1}
-            className="flex flex-1 items-center overflow-hidden outline-hidden rounded-sm focus-visible:ring-2 ring-lime-600 dark:ring-lime-400"
+            className="tw:flex tw:flex-1 tw:items-center tw:overflow-hidden tw:outline-hidden tw:rounded-sm tw:focus-visible:ring-2 tw:ring-lime-600 tw:dark:ring-lime-400"
           >
-            <span className="flex-1 truncate">{props.children}</span>
+            <span className="tw:flex-1 tw:truncate">{props.children}</span>
             {allowsSorting && (
               <span
-                className={`ml-1 size-4 flex items-center justify-center transition ${
+                className={`tw:ml-1 tw:size-4 tw:flex tw:items-center tw:justify-center tw:transition ${
                   sortDirection === "descending" ? "rotate-180" : ""
                 }`}
               >
-                {sortDirection && <ArrowUpIcon className="size-4" />}
+                {sortDirection && <ArrowUpIcon className="tw:size-4" />}
               </span>
             )}
           </Group>
-          <ColumnResizer className="w-4.25 px-2 py-0.5 h-5 bg-clip-content bg-neutral-400 dark:bg-neutral-600 cursor-col-resize rounded-sm resizing:bg-neutral-800 dark:resizing:bg-neutral-200 resizing:w-4.5 focus-visible:ring-2 ring-neutral-600 dark:ring-neutral-400 ring-inset" />
+          <ColumnResizer className="tw:w-4.25 tw:px-2 tw:py-0.5 tw:h-5 tw:bg-clip-content tw:bg-neutral-400 tw:dark:bg-neutral-600 tw:cursor-col-resize tw:rounded-sm tw:resizing:bg-neutral-800 tw:dark:resizing:bg-neutral-200 tw:resizing:w-4.5 tw:focus-visible:ring-2 tw:ring-neutral-600 tw:dark:ring-neutral-400 tw:ring-inset" />
         </div>
       )}
     </Column>
@@ -113,7 +113,7 @@ function WHRow<T extends object>(props: RowProps<T>) {
   return (
     <Row
       {...props}
-      className="even:bg-neutral-100 dark:even:bg-neutral-900 selected:bg-neutral-600 selected:text-white cursor-default group outline-hidden focus-visible:outline-2 focus-visible:outline-neutral-600 focus-visible:-outline-offset-4 selected:focus-visible:outline-white"
+      className="tw:even:bg-neutral-100 tw:dark:even:bg-neutral-900 tw:selected:bg-neutral-600 tw:selected:text-white tw:cursor-default tw:group tw:outline-hidden tw:focus-visible:outline-2 tw:focus-visible:outline-neutral-600 tw:focus-visible:-outline-offset-4 tw:selected:focus-visible:outline-white"
     />
   );
 }
@@ -122,7 +122,7 @@ function WHCell(props: CellProps) {
   return (
     <Cell
       {...props}
-      className={`px-4 py-2 truncate ${props.className} focus-visible:outline-2 focus-visible:outline-neutral-600 focus-visible:-outline-offset-4 `}
+      className={`tw:px-4 tw:py-2 tw:truncate ${props.className} tw:focus-visible:outline-2 tw:focus-visible:outline-neutral-600 tw:focus-visible:-outline-offset-4 `}
     />
   );
 }

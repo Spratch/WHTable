@@ -21,25 +21,25 @@ export default function SearchBox({ handleSearchChange }: Props) {
           target: { value: "" }
         } as React.ChangeEvent<HTMLInputElement>)
       }
-      className="group flex items-center bg-white dark:bg-neutral-800 border border-neutral-200 has-focus:border-neutral-300 dark:border-neutral-700 dark:has-focus:border-neutral-500 p-2 rounded-md has-focus shrink"
+      className="tw:group tw:flex tw:items-center tw:bg-white tw:dark:bg-neutral-800 tw:border tw:border-neutral-200 tw:has-focus:border-neutral-300 tw:dark:border-neutral-700 tw:dark:has-focus:border-neutral-500 tw:p-2 tw:rounded-md tw:has-focus tw:shrink"
     >
       <SearchIcon
         aria-hidden
-        className="size-6 opacity-50"
+        className="tw:size-6 tw:opacity-50"
       />
       <Input
         onChange={handleSearchChange}
         placeholder="Find employees"
         value={searchTerm}
-        className="ml-2 outline-none [&::-webkit-search-cancel-button]:hidden max-md:max-w-30"
+        className="tw:ml-2 tw:outline-none tw:[&::-webkit-search-cancel-button]:hidden tw:max-md:max-w-30"
       />
       <Button
         type="reset"
-        className="rounded-full p-1 bg-neutral-100 dark:bg-neutral-700 hover:bg-neutral-200 dark:hover:bg-neutral-600 transition-colors group-empty:invisible"
+        className="tw:rounded-full tw:p-1 tw:bg-neutral-100 tw:dark:bg-neutral-700 tw:hover:bg-neutral-200 tw:dark:hover:bg-neutral-600 tw:transition-colors tw:group-empty:invisible"
       >
         <CloseIcon
           aria-hidden
-          className="size-4"
+          className="tw:size-4"
         />
       </Button>
     </SearchField>

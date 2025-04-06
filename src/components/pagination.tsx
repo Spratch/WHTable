@@ -70,21 +70,25 @@ export default function Pagination({
 
   return (
     <nav
-      className="flex items-center justify-center gap-0.5 md:gap-1"
+      className="tw:flex tw:items-center tw:justify-center tw:gap-0.5 tw:md:gap-1"
       aria-label="pagination"
     >
+      {/* Prev button */}
       <Button
         onPress={() => onPageChange(currentPage - 1)}
         isDisabled={currentPage === 1}
-        className="rounded-md text-neutral-700 dark:text-neutral-300 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-neutral-200 dark:hover:bg-neutral-800 focus cursor-pointer"
+        className="tw:rounded-md tw:text-neutral-700 tw:dark:text-neutral-300 tw:disabled:opacity-40 tw:disabled:cursor-not-allowed tw:hover:bg-neutral-200 tw:dark:hover:bg-neutral-800 tw:focus tw:cursor-pointer"
+        aria-label="Previous page"
       >
-        <ChevronLeftIcon className="size-8" />
+        <ChevronLeftIcon className="tw:size-8" />
       </Button>
+
+      {/* Page numbers */}
       {pageNumbers.map((page, index) =>
         page === "…" ? (
           <span
             key={`ellipsis-${index}`}
-            className="text-neutral-600 dark:text-neutral-400"
+            className="tw:text-neutral-600 tw:dark:text-neutral-400"
           >
             …
           </span>
@@ -92,10 +96,10 @@ export default function Pagination({
           <Button
             key={`page-${page}`}
             onPress={() => onPageChange(page as number)}
-            className={`px-3 py-1 rounded-md focus cursor-pointer ${
+            className={`tw:px-3 tw:py-1 tw:rounded-md tw:focus tw:cursor-pointer ${
               currentPage === page
-                ? "bg-lime-600 dark:bg-lime-400 text-white dark:text-lime-950"
-                : "text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-800"
+                ? "tw:bg-lime-600 tw:dark:bg-lime-400 tw:text-white tw:dark:text-lime-950"
+                : "tw:text-neutral-700 tw:dark:text-neutral-300 tw:hover:bg-neutral-200 tw:dark:hover:bg-neutral-800"
             }`}
           >
             {page}
@@ -103,13 +107,14 @@ export default function Pagination({
         )
       )}
 
-      {/* Bouton suivant */}
+      {/* Next button */}
       <Button
         onPress={() => onPageChange(currentPage + 1)}
         isDisabled={currentPage === totalPages}
-        className="rounded-md text-neutral-700 dark:text-neutral-300 disabled:opacity-40 disabled:cursor-not-allowed hover:bg-neutral-200 dark:hover:bg-neutral-800 focus cursor-pointer"
+        className="tw:rounded-md tw:text-neutral-700 tw:dark:text-neutral-300 tw:disabled:opacity-40 tw:disabled:cursor-not-allowed tw:hover:bg-neutral-200 tw:dark:hover:bg-neutral-800 tw:focus tw:cursor-pointer"
+        aria-label="Next page"
       >
-        <ChevronRightIcon className="size-8" />
+        <ChevronRightIcon className="tw:size-8" />
       </Button>
     </nav>
   );
