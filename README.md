@@ -19,8 +19,6 @@ WHTable is a TypeScript React component providing an accessible, feature-rich ta
 To use WHTable, you need:
 
 - React 19 or higher
-- [Tailwind CSS 4](https://tailwindcss.com/docs/installation/using-vite) or higher configured in your project
-- [Tailwind React Aria Components plugin](https://www.npmjs.com/package/tailwindcss-react-aria-components)
 
 ## Installation
 
@@ -31,20 +29,6 @@ npm install @spratch/whtable
 ## Usage
 
 ### Tailwind CSS
-
-First you need to add these lines in your Tailwind CSS 4 file if they are not already here:
-
-```css
-/* App.css */
-
-@import "tailwindcss";
-
-@source "../../node_modules/@spratch/whtable";
-
-@plugin "tailwindcss-react-aria-components";
-```
-
-Then in the component using the table
 
 ```jsx
 // index.jsx
