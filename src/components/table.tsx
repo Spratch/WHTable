@@ -95,7 +95,7 @@ function WHColumn(props: ColumnProps & { children: string }) {
             {allowsSorting && (
               <span
                 className={`tw:ml-1 tw:size-4 tw:flex tw:items-center tw:justify-center tw:transition ${
-                  sortDirection === "descending" ? "rotate-180" : ""
+                  sortDirection === "descending" ? "tw:rotate-180" : ""
                 }`}
               >
                 {sortDirection && <ArrowUpIcon className="tw:size-4" />}
